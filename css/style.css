@@ -1,0 +1,149 @@
+/*tipografia*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Tauri&display=swap');
+/*font-family: "Noto Serif", serif;*/
+/*font-family: "Tauri", sans-serif;*/
+
+
+/*reseteo*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Serif", serif;
+    ;
+}
+
+main h1 {
+    font-family: "Tauri", sans-serif;
+}
+
+/*nav
+nav li {
+    display: inline-block;
+
+}
+
+nav li a {
+    background-color: burlywood;
+    padding: 20px;
+    color: #240442;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}*/
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*grid-template-rows: 1fr;
+    /*gap: 0px 0px;*/
+    /*grid-auto-flow: row;*/
+    grid-template-areas:
+        "Links1 Logo Links2";
+    color: #240442;
+    margin: auto;
+}
+
+.Links1 {
+    grid-area: Links1;
+}
+
+.Logo {
+    grid-area: Logo;
+}
+
+.Logo a img {
+    align-items: center;
+}
+
+.Links2 {
+    grid-area: Links2;
+}
+
+.nav ul,
+.Logo {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav ul li {
+    margin: 0 10px;
+}
+
+.nav ul li a {
+    font-weight: bold;
+    background-color: burlywood;
+
+
+}
+
+.indumentaria-americana {
+    margin: 50px;
+}
+
+.productos {
+    margin: 50px;
+}
+
+.preguntas-frecuentes {
+    margin: 50px;
+}
+
+.imagenes-productos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-around;
+    min-height: 650px;
+}
+
+.prenda {
+    display: flex;
+    border: grey solid 2px;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    box-shadow: 1px 1px 5px 2px #240442;
+    border-radius: 10px;
+    padding: 5px;
+    padding-bottom: 10px;
+    margin: 5px;
+}
+
+.prenda button {
+    padding: 5px 15px;
+    margin: 15px;
+    border-radius: 15px;
+    background-color: #240442;
+    color: white;
+    font-family: sans-serif;
+}
+
+.prenda img {
+    margin: 30px;
+    padding: 50px;
+    width: 250px;
+
+}
+
+/*media Querys*/
+@media (max-width: 1095px) {
+    .nav {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "Logo Logo"
+            "Links1 Links2"
+        ;
+
+    }
+
+    .nav .Links1 {
+        justify-content: flex-end;
+    }
+
+    .nav .Links2 {
+        justify-content: flex-start;
+    }
+}
