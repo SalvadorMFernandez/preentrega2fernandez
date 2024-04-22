@@ -137,3 +137,27 @@ main h1 {
         justify-content: flex-start;
     }
 }
+.copyright {
+    text-align: center;
+}
+.nav-pie {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+
+        "imagen-mail imagen-instagram imagen-facebook"
+        ;
+        background-color: #240442;
+        align-items: center;
+        
+
+      }
+
+.nav-pie ul img  {
+    width: 100px;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 50px;
+    
+}
