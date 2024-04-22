@@ -1,7 +1,6 @@
 /*tipografia*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Tauri&display=swap');
-/*font-family: "Noto Serif", serif;*/
-/*font-family: "Tauri", sans-serif;*/
+
 
 
 /*reseteo*/
@@ -15,21 +14,6 @@
 main h1 {
     font-family: "Tauri", sans-serif;
 }
-
-/*nav
-nav li {
-    display: inline-block;
-
-}
-
-nav li a {
-    background-color: burlywood;
-    padding: 20px;
-    color: #240442;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-}*/
 
 .nav {
     display: grid;
@@ -45,6 +29,7 @@ nav li a {
 
 .Links1 {
     grid-area: Links1;
+
 }
 
 .Logo {
@@ -81,6 +66,7 @@ nav li a {
 
 .indumentaria-americana {
     margin: 50px;
+    text-align: center;
 }
 
 .productos {
