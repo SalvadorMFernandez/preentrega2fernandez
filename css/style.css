@@ -43,6 +43,9 @@ main h1 {
 .Links2 {
     grid-area: Links2;
 }
+.carousel-item{
+   height: 900px;
+}
 
 .nav ul,
 .Logo {
@@ -75,6 +78,7 @@ main h1 {
 
 .preguntas-frecuentes {
     margin: 50px;
+    text-align: center;
 }
 
 .imagenes-productos {
