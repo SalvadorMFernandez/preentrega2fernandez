@@ -171,3 +171,10 @@ main h1 {
     }
         
     }
+
+    .nav a:hover { /*Todos los elementos <a> cuando el mouse esté posicionado sobre ellos*/
+        font-weight: bold;
+        padding:20px;
+        background-color: #250060;
+        color: #ffffff;
+    }
