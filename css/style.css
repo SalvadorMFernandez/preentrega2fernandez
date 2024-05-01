@@ -1,9 +1,6 @@
-/*tipografia*/
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Tauri&display=swap');
 
-
-
-/*reseteo*/
 * {
     margin: 0;
     padding: 0;
@@ -18,9 +15,6 @@ main h1 {
 .nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /*grid-template-rows: 1fr;
-    /*gap: 0px 0px;*/
-    /*grid-auto-flow: row;*/
     grid-template-areas:
         "Links1 Logo Links2";
     color: #240442;
@@ -86,7 +80,7 @@ main h1 {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-around;
-    min-height: 650px;
+    min-width: 100px;
 }
 
 .prenda {
@@ -118,7 +112,6 @@ main h1 {
 
 }
 
-/*media Querys*/
 @media (max-width: 1095px) {
     .nav {
         grid-template-columns: 1fr 1fr;
@@ -172,9 +165,9 @@ main h1 {
         
     }
 
-    .nav a:hover { /*Todos los elementos <a> cuando el mouse esté posicionado sobre ellos*/
+    /*.nav a:hover { /*Todos los elementos <a> cuando el mouse esté posicionado sobre ellos
         font-weight: bold;
         padding:20px;
         background-color: #250060;
         color: #ffffff;
-    }
+    }*/
