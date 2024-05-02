@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Tauri&display=swap');
 
 * {
@@ -11,18 +10,32 @@
 main h1 {
     font-family: "Tauri", sans-serif;
 }
-
+/*barra de navegacion*/
 .nav {
     display: grid;
+    color: #240442;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 0px; 
     grid-template-areas:
         "Links1 Logo Links2";
-    color: #240442;
-    margin: auto;
+
 }
+@media (max-width: 480px) {
+    .nav{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "Logo"
+        "Links1 Links2"
+        ;
+    }
+}
+
 
 .Links1 {
     grid-area: Links1;
+    justify-content: center;
 
 }
 
@@ -36,18 +49,26 @@ main h1 {
 
 .Links2 {
     grid-area: Links2;
-}
-.carousel-item{
-   height: 900px;
+
 }
 
-.nav ul,
-.Logo {
+.nav ul {
     display: flex;
     list-style: none;
     justify-content: center;
     align-items: center;
+}
 
+.Logo {
+    display: grid;
+}
+
+.Logo img {
+    display: flex;
+    max-width: 200px;
+    align-items: center;
+    margin-left: 120px;
+    
 }
 
 .nav ul li {
@@ -55,10 +76,15 @@ main h1 {
 }
 
 .nav ul li a {
+    margin: 10px;
+    padding: 10px;
     font-weight: bold;
     background-color: burlywood;
-
-
+    border-radius: 100px;
+    text-decoration: none;
+    color: #240442;
+    
+    
 }
 
 .indumentaria-americana {
@@ -68,6 +94,11 @@ main h1 {
 
 .productos {
     margin: 50px;
+    align-items: center;
+}
+.titulo{
+    padding: 50px;
+    text-align: center;
 }
 
 .preguntas-frecuentes {
@@ -78,10 +109,12 @@ main h1 {
 .imagenes-productos {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-around;
-    min-width: 100px;
+    justify-content: center;
+    min-width: 50px;
 }
+
+
+/*imagenes productos*/
 
 .prenda {
     display: flex;
@@ -109,52 +142,44 @@ main h1 {
     margin: 30px;
     padding: 50px;
     width: 250px;
-
+    
 }
 
-@media (max-width: 1095px) {
-    .nav {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "Logo Logo"
-            "Links1 Links2"
-        ;
 
-    }
-
-    .nav .Links1 {
-        justify-content: flex-end;
-    }
-
-    .nav .Links2 {
-        justify-content: flex-start;
-    }
+/*carousel*/
+.carousel-item {
+    height: 900px;
 }
 .copyright {
     text-align: center;
+    margin: 50px;
 }
+
 .nav-pie {
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: row;
+    gap: 0px 0px;
+    grid-template-areas:
+    
+    "imagen-mail imagen-instagram imagen-facebook"
+    ;
+    background-color: #240442;
+    align-items: center;
+    justify-items: center;
+    
+    
+}
 
-        "imagen-mail imagen-instagram imagen-facebook"
-        ;
-        background-color: #240442;
-        align-items: center;
-        
-
-      }
-
-.nav-pie ul img  {
+.nav-pie div a img {
     width: 100px;
     margin: 40px;
     padding: 20px;
     border-radius: 50px;
     
 }
-@media ( max-width: 650px){
+
+@media (max-width: 480px) {
     .nav-pie {
         display: flex;
         grid-template-columns: 1fr 1fr 1fr;
@@ -162,12 +187,12 @@ main h1 {
         background-color: #240442;
         flex-direction: column;
     }
-        
-    }
 
-    /*.nav a:hover { /*Todos los elementos <a> cuando el mouse esté posicionado sobre ellos
+}
+
+.nav ul a:hover { /*Todos los elementos <a> cuando el mouse esté posicionado sobre ellos*/
         font-weight: bold;
         padding:20px;
         background-color: #250060;
         color: #ffffff;
-    }*/
+} 
