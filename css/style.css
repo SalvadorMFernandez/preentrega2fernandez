@@ -15,23 +15,10 @@ main h1 {
     display: grid;
     color: #240442;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 0px 0px; 
     grid-template-areas:
         "Links1 Logo Links2";
 
 }
-@media (max-width: 480px) {
-    .nav{
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "Logo"
-        "Links1 Links2"
-        ;
-    }
-}
-
 
 .Links1 {
     grid-area: Links1;
@@ -110,7 +97,6 @@ main h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-width: 50px;
 }
 
 
@@ -119,8 +105,8 @@ main h1 {
 .prenda {
     display: flex;
     border: grey solid 2px;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     font-family: sans-serif;
     box-shadow: 1px 1px 5px 2px #240442;
     border-radius: 10px;
@@ -179,16 +165,6 @@ main h1 {
     
 }
 
-@media (max-width: 480px) {
-    .nav-pie {
-        display: flex;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "imagen-mail imagen-instagram imagen-facebook";
-        background-color: #240442;
-        flex-direction: column;
-    }
-
-}
 
 .nav ul a:hover { /*Todos los elementos <a> cuando el mouse esté posicionado sobre ellos*/
         font-weight: bold;
@@ -196,3 +172,22 @@ main h1 {
         background-color: #250060;
         color: #ffffff;
 } 
+
+@media screen and (max-width: 480) { 
+    .nav {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-area: 
+        "Logo"
+        "Links1 Links2"
+        ;
+    }
+ }
+@media (max-width: 480px) {
+    .nav-pie {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "imagen-mail imagen-instagram imagen-facebook";
+        background-color: #240442;
+        flex-direction: column;
+    }
+
+}
